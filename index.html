@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors : Unleash Your Inner Champion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Rock ✊ Paper ✋ Scissors ✌️</h1>
+        <p class="description">Unleash your inner champion in this classic game!</p>
+
+        <!-- To display both the hands of the player and the computer, you can create two separate divs within the updates
+        section. One for the player's choice and another for the computer's choice. Along with attached images to show
+        the hand movement and choice. -->
+
+        <div class="updates">
+            <div class="player-choice">
+                <img class="hand" id="player-hand" src="assets/Images/statichand.png" alt="Player's Hand">
+                <h2>You</h2>
+            </div>
+            <div class="computer-choice">
+                <img class="hand" id="computer-hand" src="assets/Images/statichandREV.png" alt="Computer's Hand">
+                <h2>Computer</h2>
+            </div>
+        </div>
+
+        <!-- To show the 3 options along with the images which user gonna select, you can create a button container with 3 buttons for Rock, Paper, and Scissors. -->
+
+        <div class="result"></div>
+
+        <div class="game-control">
+            <button id="start-button">Start Game</button>
+        </div>
+
+        <div class="button-container">
+            <button class="btn" id="rock-button">
+                <img src="assets/Images/stone.png" alt="Rock" />
+            </button>
+            <button class="btn" id="paper-button">
+                <img src="assets/Images/paper.png" alt="Paper" />
+            </button>
+            <button class="btn" id="scissors-button">
+                <img src="assets/Images/scissors.png" alt="Scissors" />
+            </button>
+        </div>
+
+        <!-- To display the scores of the player and the Computer, you can create a scoreboard section that shows the current scores. -->
+
+        <div class="scoreboard">
+            <div class="player-score">
+                <h2>Your Score</h2>
+                <p id="player-score">0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer's Score</h2>
+                <p id="computer-score">0</p>
+            </div>
+        </div>
+
+        <button id="reset-button">Reset Scores</button>
+
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

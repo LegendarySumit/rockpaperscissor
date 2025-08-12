@@ -1,0 +1,241 @@
+body {
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)),
+        linear-gradient(135deg, #0f0c29, #302b63, #24243e, #0f0c29);
+    background-size: 300% 300%;
+    animation: moveGradient 15s ease infinite;
+    color: white;
+    height: calc(100vh - 20px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+main {
+    padding: 2.3rem;
+    max-height: 100%;
+}
+
+img.hand {
+    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(0, 255, 255, 0.6));
+}
+
+main h1,
+p.description {
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+main h1 {
+    font-size: 2.2rem;
+    margin-top: -20px;
+}
+
+main p.description {
+    font-size: 1.2rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.result {
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.game-control button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background: #5628de;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(127, 90, 240, 0.8);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.game-control button:hover {
+    background: #7038c9;
+    transform: scale(1.05);
+}
+
+.updates {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-container button img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#rock-button {
+    background: rgba(255, 80, 80, 0.7);
+    box-shadow:
+        0 0 15px rgba(255, 120, 120, 0.9),
+        inset 0 0 10px rgba(255, 150, 150, 0.8);
+}
+
+#paper-button {
+    background: rgba(80, 255, 80, 0.7);
+    box-shadow:
+        0 0 15px rgba(120, 255, 120, 0.9),
+        inset 0 0 10px rgba(150, 255, 150, 0.8);
+}
+
+#scissors-button {
+    background: rgba(80, 80, 255, 0.7);
+    box-shadow:
+        0 0 15px rgba(120, 120, 255, 0.9),
+        inset 0 0 10px rgba(150, 150, 255, 0.8);
+}
+
+.button-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    gap: 10px;
+}
+
+#reset-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background: #5628de;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(127, 90, 240, 0.8);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#reset-button:hover {
+    background: #7038c9;
+    transform: scale(1.05);
+}
+
+p#player-score,
+p#computer-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 600px) {
+    .scoreboard {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    p#player-score,
+    p#computer-score {
+        font-size: 1.1rem;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container {
+        gap: 8px;
+    }
+
+    .button-container button img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .scoreboard {
+        gap: 10px;
+    }
+
+    p#player-score,
+    p#computer-score {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .button-container button img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .scoreboard {
+        text-align: center;
+    }
+
+    p#player-score,
+    p#computer-score {
+        font-size: 1rem;
+    }
+
+    main h1 {
+        font-size: 1.2rem;
+    }
+
+    main p.description {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .result {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}
